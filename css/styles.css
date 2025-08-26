@@ -11202,3 +11202,47 @@ body {
 .footer {
   padding: 5rem 0;
 }
+/* Gallery thumbnails */
+.gallery-thumb { cursor: pointer; object-fit: cover; aspect-ratio: 1/1; border-radius: 0.5rem; }
+.gallery-thumb:hover { filter: brightness(0.95); }
+/* 가로 스크롤 및 버튼 */
+.gallery-wrapper { position: relative; }
+.gallery-row { flex-wrap: nowrap; overflow-x: auto; scroll-behavior: smooth; }
+.gallery-row { overflow-y: hidden; }
+/* 스크롤바 숨김 (가로/세로 모두) */
+.gallery-row { scrollbar-width: none; -ms-overflow-style: none; }
+.gallery-row::-webkit-scrollbar { display: none; }
+.gallery-row .gallery-item { min-width: 50%; }
+@media (min-width: 768px) { .gallery-row .gallery-item { min-width: 33.3333%; } }
+@media (min-width: 992px) { .gallery-row .gallery-item { min-width: 25%; } }
+.gallery-btn { position: absolute; top: 50%; transform: translateY(-50%); border: 0; background: rgba(0,0,0,0.5); color: #fff; width: 2.25rem; height: 2.25rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; }
+.gallery-btn:hover { background: rgba(0,0,0,0.65); }
+.gallery-btn-prev { left: -0.75rem; }
+.gallery-btn-next { right: -0.75rem; }
+
+/* 결과 보기 CTA 버튼 꾸미기 */
+.btn-cta { 
+  background-color: rgba(255,255,255,0.08);
+  color: #fff;
+  border-color: rgba(255,255,255,0.4);
+  padding: 0.75rem 1.25rem;
+  border-width: 2px;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(2px);
+  transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.btn-cta:hover { 
+  background-color: rgba(255,255,255,0.18);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transform: translateY(-1px);
+}
+.btn-cta:active { transform: translateY(0); }
+/* Noto Sans KR만 적용 (기존 디자인 유지) */
+body,
+.navbar-brand,
+.nav-link,
+.masthead h1,
+.masthead h2,
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", Roboto, Arial, sans-serif;
+}

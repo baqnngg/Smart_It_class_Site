@@ -11246,3 +11246,62 @@ body,
 h1, h2, h3, h4, h5, h6 {
   font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", Roboto, Arial, sans-serif;
 }
+.curriculum-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.curriculum-card:hover {
+    transform: translateY(-5px);
+}
+.curriculum-card .card-header {
+    background: #1a1a1a;
+    color: white;
+    padding: 2rem;
+    position: relative;
+}
+.curriculum-card .card-body {
+    padding: 2rem;
+}
+.year-badge {
+    background: #64a19d;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.curriculum-item:hover {
+    color: #343a40;
+}
+.curriculum-items {
+    margin-bottom: 2rem;
+}
+.curriculum-item {
+    margin: 1rem 0;
+    color: #6c757d;
+}
+.curriculum-item i {
+    color: #64a19d;
+    width: 24px;
+}
+.curriculum-item {
+    margin: 0.75rem 0;
+    color: #6c757d;
+    transition: all 0.3s ease;
+}
+.certificate-section {
+    border-top: 1px solid #dee2e6;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+.certificate-section h5 {
+    color: #343a40;
+    margin-bottom: 1rem;
+}
+@media (max-width: 992px) {
+    .curriculum-card {
+        margin-bottom: 2rem;
+    }
+}
